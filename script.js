@@ -65,6 +65,9 @@ function playgame() {
     if(hscore>cscore){
         console.log("you win");
     }
+    else if(hscore==cscore){
+        console.log("tie");
+    }
     else{
         console.log("computer win");
     }

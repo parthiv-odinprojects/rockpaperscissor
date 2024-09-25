@@ -13,8 +13,19 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    const hchoice = prompt("enter one:rock,paper or scissor?");
-    return hchoice;
+    let hchoice;
+    document.getElementById('rock').addEventListener('click', () => {
+        hchoice = "rock";
+        return hchoice;
+    });
+    document.getElementById('paper').addEventListener('click', () => {
+        hchoice = "paper";
+        return hchoice;
+    });
+    document.getElementById('scissor').addEventListener('click', () => {
+        hchoice = "scissor";
+        return hchoice;
+    });
 }
 
 let hscore = 0;
@@ -53,21 +64,19 @@ function playround(humanchoice, computerchoice) {
 }
 
 function playgame() {
-    let round = 5;
-    while (round > 0) {
+    document.getElementById('gameoptions').style.display = 'block';
+    document.getElementById('start').style.display = 'none';
+    while (hscore < 5 || cscore < 5) {
         let humanchoice = getHumanChoice();
         let computerchoice = getComputerChoice();
         playround(humanchoice, computerchoice);
-        round = round - 1;
-    }
-    console.log("your score= "+hscore);
-    console.log("computer score= "+cscore);
-    if(hscore>cscore){
-        console.log("you win");
-    }
-    else{
-        console.log("computer win");
+        console.log("your score= " + hscore);
+        console.log("computer score= " + cscore);
+        if (hscore > cscore) {
+            console.log("you win");
+        }
+        else {
+            console.log("computer win");
+        }
     }
 }
-
-playgame();

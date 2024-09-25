@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .started {
+            display: none;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>TO PLAY THIS ROCK PAPER SCISSOR GAME PRESS F12 AND OPEN DEVELOPER TOOL TO SEE SCORE AND ALL</h1>
+    <div class="container">
+        <h1>Rock Paper Scissor</h1>
+        <button id="start" onclick="playgame()">start</button>
+        <div class="started" id="gameoptions">
+            <button id="rock">Rock</button>
+            <button id="paper">Paper</button>
+            <button id="scissor">Scissor</button>
+            <button id="stop">Stop</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>
